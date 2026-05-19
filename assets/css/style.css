@@ -1,0 +1,126 @@
+/* Reset & base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.7;
+}
+
+/* Layout */
+header, main, footer { max-width: 740px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* Nav */
+.site-nav { padding: 1rem 0; border-bottom: 1px solid #e5e5e5; margin-bottom: 2rem; }
+.site-logo { font-size: 1rem; font-weight: 600; text-decoration: none; color: #1a1a1a; }
+
+/* Hero section (homepage) */
+.hero { padding: 2rem 0 1.5rem; }
+.hero h1 { font-size: 2rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; }
+.hero p { font-size: 1.1rem; color: #555; }
+
+/* Post grid (homepage) */
+.post-grid h2 { font-size: 1.1rem; color: #555; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.post-card a { text-decoration: none; color: inherit; display: block; }
+.post-card img { width: 100%; border-radius: 8px; display: block; margin-bottom: 0.75rem; aspect-ratio: 16/9; object-fit: cover; }
+.post-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
+.post-card p { font-size: 0.9rem; color: #666; }
+
+/* Article post */
+.post { padding-bottom: 3rem; }
+
+.hero-img { margin-bottom: 1.5rem; }
+.hero-img img { width: 100%; border-radius: 8px; display: block; aspect-ratio: 1200/630; object-fit: cover; }
+
+.post h1 { font-size: 1.9rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.5rem; }
+
+.post-meta { font-size: 0.85rem; color: #888; margin-bottom: 1.25rem; }
+
+/* Disclosure */
+.disclosure {
+  font-size: 0.82rem;
+  color: #888;
+  border-left: 3px solid #e5e5e5;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.75rem;
+  border-radius: 0 4px 4px 0;
+}
+.disclosure a { color: #555; }
+
+/* Post body typography */
+.post-body h2 { font-size: 1.35rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+.post-body h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body ul, .post-body ol { margin: 0.75rem 0 1.1rem 1.5rem; }
+.post-body li { margin-bottom: 0.35rem; }
+.post-body a { color: #1a6fb5; }
+.post-body strong { font-weight: 600; }
+
+/* Ad units */
+.ad-unit { margin: 1.75rem 0; min-height: 90px; background: #f9f9f9;
+  border: 1px dashed #ddd; border-radius: 4px; display: flex;
+  align-items: center; justify-content: center; font-size: 0.75rem; color: #bbb; }
+.ad-unit::before { content: "Ad"; }
+
+/* Lead gen box */
+.lead-gen-box {
+  background: #f0f7ff;
+  border: 1px solid #b3d4f5;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+.lead-gen-box p { margin-bottom: 0.5rem; }
+.btn-primary {
+  display: inline-block;
+  background: #1a6fb5;
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.btn-primary:hover { background: #155a94; }
+
+/* FAQ */
+.faq-item { margin-bottom: 1.25rem; }
+.faq-item h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.35rem; }
+.faq-item p { font-size: 0.95rem; color: #444; }
+
+/* Related posts */
+.related-posts { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; }
+.related-posts h2 { font-size: 1rem; color: #555; margin-bottom: 0.75rem; }
+.related-posts ul { list-style: none; padding: 0; }
+.related-posts li { margin-bottom: 0.4rem; }
+.related-posts a { color: #1a6fb5; font-size: 0.95rem; }
+
+/* Footer */
+footer { padding: 1.5rem 1.25rem; border-top: 1px solid #e5e5e5;
+  font-size: 0.82rem; color: #888; margin-top: 2rem; }
+footer a { color: #888; }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body { background: #111; color: #e8e8e8; }
+  .site-logo { color: #e8e8e8; }
+  .site-nav, footer { border-color: #2a2a2a; }
+  .post-body a, .related-posts a { color: #70aee0; }
+  .disclosure { border-color: #2a2a2a; color: #888; }
+  .ad-unit { background: #1a1a1a; border-color: #2a2a2a; }
+  .lead-gen-box { background: #0d1f33; border-color: #1a4a7a; }
+  .btn-primary { background: #1a6fb5; }
+  .faq-item p { color: #bbb; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.5rem; }
+  .post h1 { font-size: 1.4rem; }
+  .post-body h2 { font-size: 1.15rem; }
+}
