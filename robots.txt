@@ -13,4 +13,4 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
-Sitemap: https://{{DOMAIN}}/sitemap.xml
+Sitemap: https://sleep-quality-lab.gnan.space/sitemap.xml
